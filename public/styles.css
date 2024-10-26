@@ -1,0 +1,85 @@
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+  }
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .navbar ul li a:hover {
+    color: #888;
+  }
+  
+  /* Background */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(black, gray);
+    overflow: hidden;
+  }
+  
+  /* Starfield Animation */
+  .starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .starfield div {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall infinite linear;
+    animation-duration: calc(3s + (1s * var(--i)));
+    top: calc(-100vh + (10 * var(--i) * 10%));
+    left: calc(100% * var(--i) / 10);
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+      opacity: 0.8;
+    }
+    25% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    75% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+  
+  /* Heading */
+  h1 {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
